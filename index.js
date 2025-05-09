@@ -2,6 +2,7 @@
 const http = require("node:http");
 const socketIo = require("socket.io"); //2,1
 const ChatData = require("./models/chatdata.models");
+const { generaRespuesta } = require("./gpt");
 
 require("dotenv").config(); //para usar variables de entorno
 
@@ -38,15 +39,23 @@ io.on("connection", async (socket) => {
   //recuperar los 5 ultimos mejsaes
 
   const messages = await ChatData.find().sort("-createdAt").limit(5);
-  socket.emit("chat_init", messages.reverse()),
-    socket.on("chat_message", async (data) => {
-      //se guarda en la bbdd
-      await ChatData.create(data);
 
-      //data recibimos el valor q estamos enviandi
+  socket.emit("chat_init", messages.reverse());
+  
+  socket.on("chat_message", async (data) => {
+    console.log(data)
+    if (data.message.startsWith("/gpt")) {
+      const pregunta = data.message.substring(5);
+      const gptResponse = await generaRespuesta(pregunta);
+      io.emit("chat_message_server", {
+        username: "GPT",
+        message: gptResponse,
+      });
+    } else {
+      await ChatData.create(data);
       io.emit("chat_message_server", data);
-      //4 enviar mensaje a todos lo clientes
-    });
+    }
+  });
 
   socket.on("disconnect", () => {
     io.emit("chat_message_server", {
