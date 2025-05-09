@@ -42,20 +42,6 @@ io.on("connection", async (socket) => {
 
   socket.emit("chat_init", messages.reverse());
   
-  socket.on("chat_message", async (data) => {
-    console.log(data)
-    if (data.message.startsWith("/gpt")) {
-      const pregunta = data.message.substring(5);
-      const gptResponse = await generaRespuesta(pregunta);
-      io.emit("chat_message_server", {
-        username: "GPT",
-        message: gptResponse,
-      });
-    } else {
-      await ChatData.create(data);
-      io.emit("chat_message_server", data);
-    }
-  });
 
   socket.on("disconnect", () => {
     io.emit("chat_message_server", {
@@ -66,7 +52,3 @@ io.on("connection", async (socket) => {
     io.emit("clientes_count", io.engine.clientsCount);
   });
 });
-
-// socket.on("chat_message", (data) => {
-//     io.emit("chat_message_server", data);
-//   });
