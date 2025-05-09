@@ -1,0 +1,97 @@
+/* .gradient-header {
+  background: linear-gradient(135deg, #c084fc, #f472b6);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.chat-bubble {
+  background-color: #f5f3ff;
+  border-left: 5px solid #c084fc;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.text-purple {
+  color: #7c3aed;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #c084fc, #f472b6);
+  border: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+  filter: brightness(1.1);
+}
+
+
+.info {
+  background-color: #ede9fe;
+  border-left: 4px solid #a78bfa;
+  font-style: italic;
+  color: #6b21a8;
+}
+
+/*  */
+
+.owner {
+  background-color: #c45eef77; /* Color de fondo para el mensaje del propietario */
+  text-align: right;
+  border: 2px solid #e50bf8; /* Borde opcional para resaltar el mensaje del usuario */
+}
+
+.owner .sender {
+  color: #d27ae966; /* Color del nombre del propietario del mensaje */
+  font-weight: bold;
+} */
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+.gradient-header {
+  background: linear-gradient(135deg, #c084fc, #f472b6);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.chat-bubble {
+  background-color: #f5f3ff;
+  border-left: 5px solid #c084fc;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.text-purple {
+  color: #7c3aed;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #c084fc, #f472b6);
+  border: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+  filter: brightness(1.1);
+}
+
+
+.info {
+  background-color: #ede9fe;
+  border-left: 4px solid #a78bfa;
+  font-style: italic;
+  color: #6b21a8;
+}
+
+/*  */
+
+.owner {
+  background-color: #c45eef77; /* Color de fondo para el mensaje del propietario */
+  text-align: right;
+  border: 2px solid #e50bf8; /* Borde opcional para resaltar el mensaje del usuario */
+}
+
+.owner .sender {
+  color: #d27ae966; /* Color del nombre del propietario del mensaje */
+  font-weight: bold;
+}
