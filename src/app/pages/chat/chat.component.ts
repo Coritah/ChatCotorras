@@ -68,12 +68,5 @@ onSubmit() {
 this.socket.emit('chat_message',
   {...this.chatForm.value, socketId: this.socket.id}) //el evento chat msg es inventado 
   this.chatForm.get('message')?.reset()
-
-
-
-
-  // if (this.chatForm.invalid) return;
-  // const nuevoMensaje: Mensaje = this.chatForm.value;
-  // this.chatForm.reset();
 }
 }
