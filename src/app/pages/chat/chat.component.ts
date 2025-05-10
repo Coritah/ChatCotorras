@@ -70,3 +70,5 @@ this.socket.emit('chat_message',
   this.chatForm.get('message')?.reset()
 }
 }
+
+document.body.classList.toggle('dark-theme');

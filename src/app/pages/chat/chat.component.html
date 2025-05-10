@@ -1,35 +1,6 @@
-<!-- <div class="container mt-3">
-    <div class="card">
-      <div class="card-header bg-primary text-white text-center fw-bold">
-       Las Cotorras que chatean
-      </div>
-  
-      <div class="card-body" style="min-height: 300px;">
-        @for (msg of mensajes; track msg) {
-
-          <div class="p-2 mb-2 bg-light rounded">
-            <div class="fw-bold">{{ msg.nombre }}</div>
-            <div>{{ msg.texto }}</div>
-          </div>
-        }
-      </div>
-  
-      <div class="card-footer">
-        <form 
-        [formGroup]="chatForm" (ngSubmit)="onSubmit()" 
-        class="d-grid gap-2">
-          <input type="text" class="form-control" formControlName="username" placeholder="Nombre" />
-          <input type="text" class="form-control" formControlName="message" placeholder="Mensaje" />
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </div>
-   -->
-
    <div class="container mt-3">
     <div class="card shadow-lg border-0">
-      <div class="card-header text-white text-center fw-bold gradient-header">
+      <div class="card-header text-center fw-bold gradient-header">
         Las Cotorras que chatean
         <span class="d-block fs-6">chismosas conectadas 👥:{{ clientesConectados }}</span>
       </div>
@@ -46,7 +17,7 @@
         }
       </div>
   
-      <div class="card-footer bg-white">
+      <div class="card-footer ">
         <form [formGroup]="chatForm" (ngSubmit)="onSubmit()" class="d-grid gap-2">
           <input type="text" class="form-control" formControlName="username" placeholder="Nombre" />
           <input type="text" class="form-control" formControlName="message" placeholder="Mensaje" />
